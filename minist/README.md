@@ -1,79 +1,110 @@
-🧠 MNIST Digit Classification using ANN (Artificial Neural Network)
+# 🧠 MNIST Digit Classification using ANN (Artificial Neural Network)
 
-This project demonstrates how to train an ANN using TensorFlow and Keras
-to classify handwritten digits from the MNIST dataset with 98%+ accuracy.
-You can also test the model by predicting digits from your own hand-drawn images.
-
-📁 Project Structure:
-
-mnist_digit_classifier/
-│
-├── mnist_ann.py            --> Training the ANN model on MNIST
-├── predict_digit.py        --> Predicting digit from a custom image
-├── mnist_ann_model.keras   --> Saved trained model
-├── digit.png               --> Your own handwritten digit image
-└── README.txt              --> Project documentation
+This project demonstrates how to build and train an Artificial Neural Network (ANN) using TensorFlow and Keras to classify handwritten digits from the MNIST dataset. The trained model achieves over **98% accuracy** and can also predict digits from your own hand-drawn images.
 
 
-📦 Requirements:
+## 📦 Requirements
 
-Python 3.8 or higher
+Make sure you have Python 3.8 or higher installed on your system.
 
-Install the required libraries:
+### Install Required Libraries
 
-> Using pip:
-    pip install tensorflow numpy pillow
+#### Using pip:
 
-> Or using Anaconda:
-    conda create -n mnist_env python=3.9
-    conda activate mnist_env
-    pip install tensorflow numpy pillow
+pip install tensorflow numpy pillow
 
 
-🚀 How to Use:
+#### Using Anaconda:
 
-STEP 1: Train the ANN model
+conda create -n mnist_env python=3.9
+conda activate mnist_env
+pip install tensorflow numpy pillow
 
-    python mnist_ann.py
+
+## 🚀 How to Use This Project
+
+### ✅ STEP 1: Train the ANN Model
+
+1. Open a terminal or command prompt.
+2. Navigate to the project directory where `mnist_ann.py` is located.
+3. Run the training script:
+
+python mnist_ann.py
 
 This will:
-- Load the MNIST dataset
-- Train the neural network
-- Save the model as 'mnist_ann_model.keras'
 
-STEP 2: Create Your Own Digit Image
-- Open MS Paint or any drawing tool
-- Draw a black digit (0-9) on a white background
-- Save the image as 'digit.png' in the same folder
-
-STEP 3: Predict Your Digit
-    python predict_digit.py
-
-This will load your image, preprocess it, and print the predicted digit.
-
-Example Output:
-    Predicted Digit: 7
+* Load the MNIST dataset (built-in)
+* Preprocess and normalize the data
+* Train the ANN model
+* Save the model as `mnist_ann_model.keras`
 
 
-⚠️ Common Issues:
+### 🖌️ STEP 2: Create Your Own Handwritten Digit Image
 
-Wrong predictions?
-- Make sure digit is centered and clear
-- Use black on white background
-- Let the code resize and invert the image
-- Keep file name as 'digit.png'
+1. Open any drawing tool like **MS Paint**.
+2. Draw a **black digit (0–9)** on a **white background**.
+3. Save the image as `digit.png` in the same project folder.
 
-📈 Improving Accuracy:
+**Tips for better results:**
 
-Even better results can be achieved by:
+* Use a **thick brush**
+* Keep the digit centered
+* Avoid any background noise
+* Maintain a white background and black digit
 
-✔ Switching to a CNN model (Convolutional Neural Network)
-✔ Using image preprocessing and centering (OpenCV)
-✔ Applying data augmentation during training
 
-📧 Contact:
-Email: hashirkhan462002@gmail.com  
+### 🔍 STEP 3: Predict the Digit
 
-⭐ Credits:
-- MNIST dataset provided by Yann LeCun
-- TensorFlow / Keras open source frameworks
+1. Ensure the trained model (`mnist_ann_model.keras`) and `digit.png` image are present in the same folder.
+2. Run the prediction script:
+
+python predict_digit.py
+
+
+The script will:
+
+* Load and preprocess `digit.png`
+* Resize and normalize the image
+* Load the trained ANN model
+* Output the predicted digit in the terminal
+
+**Example Output:**
+
+Predicted Digit: 7
+
+
+## ⚠️ Troubleshooting and Tips
+
+**Wrong predictions?**
+
+* Ensure image is named `digit.png`
+* Use **black on white background**
+* Keep the digit bold, clean, and centered
+* Do not crop the digit too closely
+
+**Model not loading?**
+
+* Make sure `mnist_ann_model.keras` was generated after training
+* Ensure TensorFlow and required libraries are properly installed
+
+
+## 📈 Improving Model Accuracy
+
+To further improve the model performance:
+
+* ✔️ Switch to a **CNN (Convolutional Neural Network)** — better suited for image data
+* ✔️ Apply **image preprocessing techniques** like thresholding, centering, or smoothing (use OpenCV)
+* ✔️ Use **data augmentation** (rotation, scaling, shift) during training for better generalization
+
+
+## 📧 Contact
+
+If you face any issues or have questions:
+
+**Email:** [hashirkhan462002@gmail.com](mailto:hashirkhan462002@gmail.com)
+
+
+## ⭐ Credits
+
+* MNIST Dataset by [Yann LeCun](http://yann.lecun.com/exdb/mnist/)
+* TensorFlow and Keras open-source libraries
